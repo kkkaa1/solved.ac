@@ -1,0 +1,18 @@
+a=input()
+b=input()
+c=input()
+a=int(a)
+b=b.split(" ")
+c=c.split(" ")
+for i in range(a):
+    b[i]=int(b[i])
+    c[i]=int(c[i])
+
+b1=sorted(b)
+c1=sorted(c,reverse=True)
+
+result=0
+for i in range(a):
+    num=int(b1[i])*int(c1[i])
+    result+=num
+print(result)
