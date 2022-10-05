@@ -1,0 +1,11 @@
+i=int(input())
+dp=[0]*(i+1)
+for j in range(2,i+1):
+    dp[j]=dp[j-1]+1
+
+    if j%2==0:
+        dp[j]=min(dp[j//2]+1,dp[j])
+    if j%3==0:
+        dp[j]=min(dp[j//3]+1,dp[j])
+
+print(dp[i])
