@@ -1,0 +1,17 @@
+'''
+answer=a*5+b*3
+answer-b*3=a*5
+'''
+answer=int(input())
+sum=0
+while answer%5!=0:
+    answer=answer-3
+    sum+=1
+    if answer<0:
+        sum=-1
+        break
+if answer%5==0:
+    sum=sum+int(answer/5)
+
+print(sum)
+    
