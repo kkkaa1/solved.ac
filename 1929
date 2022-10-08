@@ -1,0 +1,21 @@
+'''시간초과가 떠버렸다. ..'''
+k=input()
+k=k.split(" ")
+a=int(k[0])
+b=int(k[1])
+
+l=list(range(a,b+1))
+def thtn(x):
+     
+    for i in range(2,x):
+        if x%i==0:
+            return False
+
+            
+        
+            
+for i in l:
+    
+    if thtn(i)==None:
+        print(i)
+        
