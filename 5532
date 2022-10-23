@@ -1,0 +1,17 @@
+lst=[]
+for i in range(5):
+    i=int(input())
+    lst.append(i)
+def cal(a,b):
+    
+    if a/b==a//b:
+        return a//b
+    else:
+        return a//b+1
+l1=lst[0]
+l2=lst[1]
+l3=lst[2]
+l4=lst[3]
+l5=lst[4]
+
+print(l1-max(cal(l3,l5),cal(l2,l4)))
