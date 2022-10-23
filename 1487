@@ -1,0 +1,36 @@
+a=int(input())
+dic={}
+for i in range(a):
+    i=input()
+    a,b=map(lambda x: int(x),i.split(" "))
+    if a>b:
+        if a not in dic:
+            dic[a]=[b]
+        else:
+            dic[a].append(b)
+
+if len(dic.keys())==0:
+    print(0)
+else:
+    max_price_dic={}
+    pricelist=dic.keys()
+    for i in pricelist:
+        max_price_dic[i]=[]
+
+    for i in pricelist:
+        max_price=0
+
+        for j in dic:
+            if j>=i:
+                for k in dic[j]:
+                    if i>k:
+                        max_price_dic[i].append(i-k)
+
+    for i in max_price_dic:
+
+        max_price_dic[i]=sum(max_price_dic[i])
+    lsstt=[]
+    for i in max_price_dic:
+        if max_price_dic[i]==max(max_price_dic.values()):
+            lsstt.append(i)
+    print(min(lsstt))
