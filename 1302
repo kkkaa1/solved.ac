@@ -1,0 +1,14 @@
+dic={} 
+a=int(input())
+for i in range(a):
+    i=input()
+    if i in dic:
+        dic[i]+=1
+    else:
+        dic[i]=1
+lst=[]
+for i in dic:
+    if dic[i]==max(dic.values()): # 가장 많은 값이 나온 책 이름 찾기
+        lst.append(i)
+lst.sort() #알파벳순으로 정렬하기
+print(lst[0])
