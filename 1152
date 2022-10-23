@@ -1,0 +1,8 @@
+'''strip으로 공백정리하고 split쓰면될듯?'''
+a=input()
+
+words=a.strip().split(" ")
+if "" in words: # 공백으로만 이뤄졌을때!! 공백제거로는 안지워짐
+    print(0)
+else:
+    print(len(words))
