@@ -1,0 +1,20 @@
+a=int(input())
+lst=[]
+dic={}
+
+for i in range(a):
+    x=input()
+    x=x[0]
+    if x in dic:
+        dic[x]+=1
+    else:
+        dic[x]=1
+for i in dic:
+    if dic[i]>=5:
+        lst.append(i)
+lst.sort()
+if len(lst)>0:
+    for i in lst:
+        print(i,end='')
+else:
+    print("PREDAJA")
