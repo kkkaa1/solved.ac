@@ -1,0 +1,38 @@
+def min_keys(dic):
+    lst=[]
+    min_value=min(dic.values())
+    for i in dic:
+        if dic[i]==min_value:
+            lst.append(i)
+    return lst
+
+a=int(input())
+c=input()
+b=input().split()
+b=list(map(lambda x: int(x),b))
+dic={}
+lst=[]#현재 액자에 올라가있는 후보들 명단
+lst2=[]
+for i in b:#반복시작
+    if i not in lst: #액자후보중에 i가 없을경우
+        if len(lst)<a: #액자가 세개 다 채워지기전에는 일단 넣기
+            lst.append(i)
+            dic[i]=1
+        else:#액자가 꽉차서 앞사람것중에 하나를 버려야댐
+            if len(min_keys(dic))==1: #겹치는거 없을때 그냥 표 제일적은사람 없애기
+                k=min_keys(dic)[0] #겹치는사람의 번호
+                del dic[k] #겹치는사람의 번호를 이용해 딕셔너리의 번호제거
+                lst.remove(k)#똑같이 리스트안에 번호 제거
+                lst.append(i)#리스트와 딕셔너리에 i후보 추가
+                dic[i]=1
+            else:#겹치는후보가 두명이상일때 리스트에 추가된 순서(액자틀에 게시된 순서)로 제거함
+                k=min_keys(dic)[0]#k는 겹치는 후보중에 액자틀에 가장 먼저 제시된 사람의 번호
+                del dic[k] 
+                lst.remove(k)
+                lst.append(i)
+                dic[i]=1
+    else:#후보가 액자에 이미 있어서 표만 추가하면되는상황
+        dic[i]+=1
+    dic=dict(sorted(dic.items(), key=lambda x:x[1],reverse=True))
+for i in dic:
+    print(i,end=' ')
