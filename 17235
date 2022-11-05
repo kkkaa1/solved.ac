@@ -1,0 +1,19 @@
+import sys
+input=sys.stdin.readline
+plus=[]
+minus=[]
+a=int(input())
+for i in range(a):
+    i=input()
+    i=i.split(" ")
+    x,y=(map(lambda x: int(x),i))
+    plus.append(x+y)
+    minus.append(y-x)
+plus_length=abs(max(plus)-min(plus))
+minus_length=abs(max(minus)-min(minus))
+r=max(plus_length,minus_length)
+answer=r*r//2
+if r%2==0:
+    print(answer)
+else:
+    print(str(answer)+'.5')
