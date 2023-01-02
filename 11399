@@ -1,0 +1,9 @@
+num=int(input())
+inpu=input().split(" ")
+lst=list(map(int,inpu))
+lst=sorted(lst)
+sum=0
+for i in range(num+1):
+    for j in range(i):
+        sum+=lst[j]
+print(sum)
