@@ -1,0 +1,15 @@
+num=int(input())
+lst=[]
+for i in range(num):
+    x,y=map(int,input().split())
+    lst.append([x,y,i+1])
+for i in range(len(lst)-1):
+    for j in range(1,len(lst)):
+        if lst[i][0]+lst[i][1]*lst[j][0]<lst[j][0]+lst[j][1]*lst[i][0]:
+            value=lst[i]
+            lst[i]=lst[j]
+            lst[j]=value
+        else:
+            continue
+for i in lst:
+    print(i[2])
