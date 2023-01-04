@@ -1,0 +1,11 @@
+num=int(input())
+for i in range(num):
+    
+    lst=(list(map(int,input().split())))
+    mean=sum(lst[1:])/lst[0]
+    more=0
+    for j in lst[1:]:
+        if j>mean:
+            more+=1
+        
+    print("{:.3f}%".format(more/lst[0]*100))
