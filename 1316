@@ -1,0 +1,21 @@
+num=int(input())
+count=0
+for i in range(num):
+    string=input()
+    lst=[]
+    for j in range(len(string)):
+        lst.append(string[j])
+    a={}
+    for i in string:
+        if i not in a:
+            a[i]=1
+        else:
+            a[i]+=1
+    for i in a:
+        if a[i]!=1:
+            if string.find(i*a[i]) == -1:
+                count+=1
+                
+                break
+
+print(num-count)
