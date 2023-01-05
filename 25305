@@ -1,0 +1,5 @@
+x,y=map(int,input().split())
+nums=input().split(" ")
+nums=list(map(int,nums))
+nums.sort(reverse=True)
+print(nums[y-1])
