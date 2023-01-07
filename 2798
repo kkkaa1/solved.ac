@@ -1,0 +1,12 @@
+x,y=map(int,input().split())
+numlst=list(map(int,input().split()))
+sum=0
+for i in range(x-2):
+    for j in range(i+1,x-1):
+        for k in range(j+1,x):
+            if numlst[i]+numlst[j]+numlst[k]<=y and numlst[i]+numlst[j]+numlst[k]>sum:
+                sum=numlst[i]+numlst[j]+numlst[k]
+                
+print(sum)                
+
+            
