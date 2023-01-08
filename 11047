@@ -1,0 +1,15 @@
+x,y= map(int,input().split())
+xlst=[]
+sum=0
+for i in range(x):
+    i=int(input())
+    xlst.append(i)
+for i in xlst[::-1]:
+    if y< i:
+        continue
+    else:
+        num=y//i
+        y=y-i*num
+        
+        sum+=num    
+print(sum)
