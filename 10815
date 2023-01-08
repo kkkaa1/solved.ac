@@ -1,0 +1,16 @@
+num1=int(input())
+lst1=list(map(int,input().split()))
+num2=int(input())
+lst2=list(map(int,input().split()))
+
+set1=set(lst1)
+set2=set(lst2)
+nowset=set2&set1
+for i in range(len(lst2)):
+    if lst2[i] in nowset:
+        lst2[i]=1
+        
+    else:
+        lst2[i]=0
+for i in lst2:
+    print(i,end=' ')
