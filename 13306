@@ -1,0 +1,16 @@
+'''
+4
+2 3 1
+5 2 3 1
+'''
+num=int(input())
+dd=list(map(int,input().split()))
+money=list(map(int,input().split()))
+sortm=sorted(money)
+moneycount=0
+for i in sortm:
+    n=money.index(i)
+    moneycount+=money[n]*sum(dd[n:])
+    dd=dd[:n]
+print(moneycount)
+
