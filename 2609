@@ -1,0 +1,23 @@
+x,y=map(int,input().split())
+
+def dirtn(x):
+    n=2
+    xlst=[]
+    while x!=1:
+        while x/n==x//n:
+            x=x//n
+            xlst.append(n)
+        n+=1
+    return xlst
+xlst=dirtn(x)
+ylst=dirtn(y)
+dirtnlst=[]
+for i in xlst:
+    if i in ylst:
+        ylst.remove(i)
+        dirtnlst.append(i)
+mul=1
+for i in dirtnlst:
+    mul*=i
+print(mul)
+print(int(mul*(x/mul)*(y/mul)))
