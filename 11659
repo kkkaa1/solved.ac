@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+m,n=map(int,input().split())
+lst=list(map(int,input().split()))
+value=0
+slst=[0]
+for i in lst:
+    value+=i
+    slst.append(value)
+for i in range(n):
+    x,y=map(int,input().split())
+    print(slst[y]-slst[x-1])
