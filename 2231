@@ -1,0 +1,17 @@
+n=int(input())
+a=True
+value=0
+for i in range(1,n):
+    lst=[]
+    num=str(i)
+    for j in range(len(num)):
+        lst.append(num[j])
+    lst=list(map(int,lst))
+    lst.append(i)
+    value=sum(lst)
+    if value == n:
+        print(i)
+        a=False
+        break
+if a== True:
+    print(0)
