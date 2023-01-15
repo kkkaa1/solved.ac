@@ -1,0 +1,12 @@
+num=int(input())
+i=665
+count=0
+while True:
+    
+    if '666' in str(i):
+        count+=1
+    
+    if count== num:
+        print(i)
+        break
+    i+=1
