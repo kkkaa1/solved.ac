@@ -1,0 +1,28 @@
+x,y=map(int,input().split())
+lst=list(map(int,input().split()))
+quelst=[i+1 for i in range(x)]
+def a1(quelst):
+    del quelst[0]
+    return quelst
+def a2(quelst):
+    quelst.append(quelst[0])
+    del quelst[0]
+    return quelst
+def a3(quelst):
+    quelst.insert(0,quelst.pop())
+    return quelst
+answer=[]
+for i in lst:
+    inde=quelst.index(i)+1
+    a=inde-1
+    b=len(quelst)-inde+1
+    if a>=b:
+        answer.append(b)
+        for j in range(b):
+            a3(quelst)
+    else:
+        answer.append(a)
+        for j in range(a):
+            a2(quelst)
+    a1(quelst)
+print(sum(answer))
