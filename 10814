@@ -1,0 +1,10 @@
+num=int(input())
+lst=[]
+for i in range(num):
+    x,y= input().split()
+    x=int(x)
+    lst.append([x,i,y])
+lst.sort()
+for i in lst:
+    print(i[0], i[2])
+print(lst)
