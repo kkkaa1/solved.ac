@@ -1,0 +1,15 @@
+n,m=map(int,input().split())
+lst=[]
+def appends(start):
+    
+    if len(lst)==m:
+        print(' '.join(map(str,lst)))
+        return
+    
+    else:
+        for i in range(start,n+1):
+        
+            lst.append(i)
+            appends(i)
+            lst.pop()
+appends(1)
