@@ -1,0 +1,16 @@
+import sys
+import numpy as np
+input=sys.stdin.readline
+lst=[]
+for i in range(9):
+    i=list(map(int,input().split()))
+    lst+=i
+arr=np.array(lst)
+arr.reshape(9,9)
+
+num=np.argmax(arr)+1
+print(max(arr))
+if num%9==0:
+    print(num//9+1,9)
+else:
+    print(num//9+1,num%9)
