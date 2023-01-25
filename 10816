@@ -1,0 +1,17 @@
+num=int(input())
+lst=list(map(int,input().split()))
+n=int(input())
+lst2=list(map(int,input().split()))
+dct={}
+for i in lst:
+    if i not in dct:
+        dct[i]=1
+    else:
+        dct[i]+=1
+answer=[]
+for i in lst2:
+    if i not in dct:
+        answer.append(0)
+    else:
+        answer.append(dct[i])
+print(*answer)
