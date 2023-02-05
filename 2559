@@ -1,0 +1,13 @@
+import sys
+input=sys.stdin.readline
+
+N,K = map(int,input().split())
+S=list(map(int,input().split()))
+num=sum(S[:K])
+maxtemp=num
+for i in range(N-K):
+    num=num+S[i+K]-S[i]
+    if(maxtemp<num):
+        maxtemp=num
+
+print(maxtemp)
