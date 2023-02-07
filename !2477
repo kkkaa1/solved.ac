@@ -1,0 +1,28 @@
+dct={}
+lst=[]
+lst2=[]
+num=int(input())
+for i in range(6):
+    x,y=map(int,input().split())
+    lst.append(x)
+    lst2.append(y)
+lst=lst+lst[:3]
+number=0
+num1,num2,num3,num4=0,0,0,0
+for i in range(9):
+    if lst[i]==1:
+        num1+=1
+    elif lst[i]==2:
+        num2+=1
+    elif lst[i]==3:
+        num3+=1
+    else:
+        num4+=1
+    if num1 ==2 or num2==2 or num3==2 or num4==2:
+        number=i
+        break
+area=0
+area=sum(lst2[::2])//2 *sum(lst2[1::2])//2
+lst2=lst2+lst2[:3]    
+smallarea= lst2[number]*lst2[number+1]
+print((area-smallarea)*num)
