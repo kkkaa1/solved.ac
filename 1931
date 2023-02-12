@@ -1,0 +1,19 @@
+alst=[]
+
+num=int(input())
+for i in range(num):
+    a,b=map(int,input().split())
+    alst.append([b,a,i])
+for i in alst:
+    if alst[]
+cnt=0
+time=-1
+alst=sorted(alst)
+for i in range(num):
+    if time <= alst[i][1]:
+        time = alst[i][0]
+        cnt+=1
+    else:
+        continue
+
+print(cnt)
