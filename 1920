@@ -1,0 +1,23 @@
+num=int(input())
+lst=sorted(list(map(int,input().split())))
+num2=int(input())
+lst2=list(map(int,input().split()))
+def dlwlsxkator(arr,target):
+    start = 0
+    end = num -1 
+    while start <= end :
+        mid = (start+end)//2
+        if arr[mid] == target:
+            return True
+        elif arr[mid] < target:
+            start = mid +1
+        else:
+            end = mid - 1
+    return False
+
+for i in range(num2):
+    
+    if dlwlsxkator(lst,lst2[i]):
+        print(1)
+    else:
+        print(0)
