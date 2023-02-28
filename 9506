@@ -1,0 +1,16 @@
+while True:
+    n=int(input())
+    if n == -1:
+        break
+    else:
+        num= 2
+        lst=[1]
+        while num != n:
+            if n%num ==0:
+                lst.append(num)
+            num+=1
+        if sum(lst)==n:
+            print(n ,end=' = ')
+            print('+'.join(map(str,lst)))
+        else:
+            print(f"{n} is Not perfect.")
