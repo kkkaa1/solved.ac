@@ -1,0 +1,13 @@
+n=int(input())
+lst=list(map(int,input().split()))
+cnt=n
+for i in lst:
+    alst=[x for x in range(2,i)]
+    for j in alst:
+        if i % j ==0:
+            
+            cnt-=1
+            break
+if 1 in lst:
+    cnt-=1
+print(cnt)
