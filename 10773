@@ -1,0 +1,11 @@
+lst=[]
+n = int(input())
+for i in range(n):
+    
+    i = int(input())
+    if (i ==0) and len(lst) !=0:
+        lst.pop()
+    else:
+        lst.append(i)
+print(sum(lst))
+    
