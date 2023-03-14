@@ -1,0 +1,9 @@
+n,m=map(int,input().split())
+lst = [x+1 for x in range(n)]
+for i in range(m):
+    a,b= map(int,input().split())
+    if a==1:
+        lst[:b]=lst[b-1::-1]
+    else:
+        lst[a-1:b]=lst[b-1:a-2:-1]
+print(*lst)  
