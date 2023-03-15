@@ -1,0 +1,16 @@
+st = input()
+st=st.upper()
+setst=set(st)
+dic={}
+for i in setst:
+    num = st.count(i)
+    if num not in dic:
+        dic[num]=i
+    else:
+        dic[num]+=i
+        
+num= max(dic.keys())
+if len(dic[num]) >1:
+    print("?")
+else:
+    print(dic[num])
