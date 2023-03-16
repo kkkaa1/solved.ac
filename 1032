@@ -1,0 +1,18 @@
+n =int(input())
+lst=[]
+for _ in range(n):
+    lst.append(input())
+length = len(lst[0])
+def trueorfalse(lst,num):
+    char = lst[0][num]
+    for i in lst:
+        if i[num]== char:
+            continue
+        else:
+            return "?"
+    return char
+ans=[]
+for i in range(length):
+    ans.append(trueorfalse(lst,i))
+for i in ans:
+    print(i,end='')
