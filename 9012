@@ -1,0 +1,15 @@
+def isvalid(s):
+    stack = []
+    for i in s:
+        if i=='(':
+            stack.append(')')
+        elif not stack or stack.pop()!=i:
+            return 'NO'
+    if len(stack)==0:
+        return 'YES'
+    else:
+        return 'NO'
+num = int(input())
+for i in range(num):
+    print(isvalid(input()))
+    
