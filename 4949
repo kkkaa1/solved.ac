@@ -1,0 +1,29 @@
+lst=[]
+while True:
+    i = input()
+    if i =='.':
+        break
+    lst.append(i)
+def kassadin(sen):
+    stack = []
+    for i in sen:
+        if i =='(':
+            stack.append(')')
+        elif i =='[':
+            stack.append(']')
+        
+        elif i in [')',']']:
+            if not stack:
+                return 'no'
+            elif stack.pop()!=i:
+                return 'no'
+        
+        else:
+            continue
+    if not stack:
+        return'yes'
+    else:
+        return 'no'
+for i in lst:
+    print(kassadin(i))
+        
