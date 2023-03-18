@@ -1,0 +1,18 @@
+n = int(input())
+number=int(n)
+cnt = 0
+one=n
+while True:
+  if n<10:
+    n=n*10
+    newn=(n//10+n%10)%10+n
+  else:
+    newn=(n//10+n%10)%10+(n%10)*10
+  cnt+=1
+
+  if one==newn:
+    break
+  else:
+    n=newn
+  
+print(cnt)     
