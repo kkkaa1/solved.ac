@@ -1,0 +1,16 @@
+case = int(input())
+def fashion():
+    dic={}
+    num=int(input())
+    for i in range(num):
+        n,m=input().split()
+        if m in dic:
+            dic[m].append(n)
+        else:
+            dic[m]=[n]
+    cnt=1
+    for i in dic:
+        cnt*=len(dic[i])+1
+    print(cnt-1)
+for i in range(case):
+    fashion()
