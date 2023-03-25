@@ -1,0 +1,11 @@
+n,m= map(int,input().split())
+dic={}
+for i in range(n):
+    i=input()
+    dic[i]=True
+cnt=0
+for i in range(m):
+    i=input()
+    if i in dic:
+        cnt+=1
+print(cnt)
