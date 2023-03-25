@@ -1,0 +1,12 @@
+num = int(input())
+lst=(input().split())
+dic={}
+for i in lst:
+    dic[i]=0
+for i in range(num):
+    lst2=input().split()
+    for j in lst2:
+        dic[j]+=1
+dic_s=sorted(dic.items(),key=lambda item:item[1],reverse=True)
+for i in dic_s:
+    print(i[0],i[1])
