@@ -1,0 +1,14 @@
+n,m= map(int,input().split())
+dic={}
+for i in range(n):
+    i=input()
+    dic[i]=True
+lst=[]
+for i in range(m):
+    i=input()
+    if i in dic:
+        lst.append(i)
+print(len(lst))
+
+for i in sorted(lst):
+    print(i)
