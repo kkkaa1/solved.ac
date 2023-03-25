@@ -1,0 +1,15 @@
+dic={}
+cnt=0
+n=int(input())
+for i in range(n):
+    dic[input()]=i
+lst=[]
+for i in range(n):
+    inp=input()
+    lst.append(dic[inp])
+    for j in range(dic[inp]):
+        if j not in lst:
+            cnt+=1
+            break
+print(cnt)
+    
