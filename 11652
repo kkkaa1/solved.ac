@@ -1,0 +1,19 @@
+num=int(input())
+dic={}
+for i in range(num):
+    inp=int(input())
+    if inp not in dic:
+        dic[inp]=1
+        
+    else:
+        dic[inp]+=1
+cnt,ans=0,0
+for i,j in dic.items():
+    if j>cnt:
+        cnt=j
+        ans=i
+    elif j==cnt:
+        if ans>i:
+            ans=i
+print(ans)
+        
