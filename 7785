@@ -1,0 +1,14 @@
+num=int(input())
+dic={}
+for i in range(num):
+    x,y=input().split()
+    if x not in dic:
+        dic[x]=1
+    elif y =='enter':
+        dic[x]+=1
+    else:
+        dic[x]-=1
+itemss=dic.items()
+for i in sorted(dic,reverse=True):
+    if dic[i]==1:
+        print(i)
