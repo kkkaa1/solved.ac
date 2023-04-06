@@ -1,0 +1,15 @@
+dic={'BANANA':0,'PLUM':0,'STRAWBERRY':0,'LIME':0}
+num=int(input())
+for i in range(num):
+    x,y=input().split()
+    y=int(y)
+    dic[x]+=y
+a=False
+for i in dic:
+    if dic[i]==5:
+        a=True
+if a==False:
+    print('NO')
+else:
+    print('YES')
+    
