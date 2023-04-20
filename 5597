@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int arr[]=new int[30];
+		for(int i=0;i<28;i++) {
+			int num=sc.nextInt();
+			arr[num-1]=1;
+		}
+		int num2=0;
+		int num3=0;
+		for(int i=0;i<30;i++) {
+			if(arr[i]!=1 & num2==0) {
+				num2=i+1;
+				continue;
+			}
+			if(arr[i]!=1 & num2!=0) {
+				num3=i+1;
+			}
+		}
+		if(num3>num2) {
+			System.out.println(num2+"\n"+num3);
+		}
+		else {
+			System.out.println(num3+"\n"+num2);
+		}
+
+}
+}
